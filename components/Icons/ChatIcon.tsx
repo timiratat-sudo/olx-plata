@@ -1,0 +1,16 @@
+export default function ChatIcon({ size = 20, color = "currentColor" }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill={color}
+    >
+      <path
+        fillRule="evenodd"
+        d="M11 4.01c-3.86 0-7 3.157-7 7.038v8.426l2.553-1.283.447-.106h6c3.86 0 7-3.157 7-7.037S16.86 4.01 13 4.01zM3.447 22 2 21.1V11.049C2 6.058 6.037 2 11 2h2c4.962 0 9 4.059 9 9.048s-4.038 9.047-9 9.047H7.236z"
+      />
+    </svg>
+  );
+}

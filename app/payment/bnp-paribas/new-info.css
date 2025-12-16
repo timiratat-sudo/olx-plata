@@ -1,0 +1,296 @@
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #ffffff;
+  font-family: "Segoe UI Variable Text", "Segoe UI", sans-serif;
+}
+
+/* Вся страница */
+.new-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Основной контейнер: mobile-first */
+.new-main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px 16px 32px;
+  box-sizing: border-box;
+}
+
+
+/* ЛОГО / КАРТИНКА СЛЕВА СВЕРХУ */
+.new-logo-wrapper {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.new-logo {
+  display: block;
+  width: 160px;
+  height: auto;
+  margin-top: 24px;
+}
+
+/* ЗАГОЛОВОК */
+.new-title {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 32px;
+}
+
+/* ТЕКСТ ПОД ЗАГОЛОВКОМ */
+.new-description {
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2e3c45;
+  margin-top: 24px;
+}
+
+/* ЛЕЙБЛ НАД ИНПУТОМ */
+.new-input-label {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2e3c45;
+}
+
+/* ФОРМА */
+.new-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+/* ИНПУТ — почти на всю ширину */
+.new-input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #939393;
+  font-size: 16px;
+  padding: 10px 12px;
+  box-sizing: border-box;
+}
+
+/* Ошибка: красная рамка + placeholder */
+.new-input-error {
+  border-color: #ff4d4d;
+}
+
+.new-input-error::placeholder {
+  color: #ff4d4d;
+}
+
+/* Текст ошибки под инпутом */
+.new-input-error-text {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #ff4d4d;
+}
+
+/* КНОПКА — почти на всю ширину */
+.new-button {
+  width: 100%;
+  height: 44px;
+  border: none;
+  background-color: #007548;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.new-button:hover {
+  background-color: #005a36;
+}
+
+/* МАЛЫЙ ЗАГОЛОВОК ПОД КНОПКОЙ */
+.new-subtitle {
+  margin: 8px 0 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* СПИСОК ИЗ 3 ЛИНИЙ */
+.new-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Одна строка: иконка + текст */
+.new-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* Иконка */
+.new-icon-wrapper {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.new-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Текст рядом с иконкой */
+.new-list-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2e3c45;
+}
+
+/* Серая линия перед футером */
+.new-separator {
+  width: 100%;
+  height: 1px;
+  background: #dddddd;
+  margin: 8px 0 12px;
+}
+
+/* ФУТЕР: 3 строки, каждая на своей линии */
+.new-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: -20px;
+}
+
+.new-footer-line {
+  margin: 0;
+  font-size: 12px;
+  color: #636363;
+  margin-top: 6px;
+  margin-left: 10px;
+}
+
+.new-footer-logo{
+    width: 80px;
+    margin-top: 16px;
+    margin-left: 10px;
+  }
+
+
+/* ========= АДАПТИВ ========= */
+
+@media (min-width: 768px) {
+  .new-main {
+    max-width: 600px;
+    padding: 24px 24px 40px;
+  }
+
+  .bnp-footer-logo{
+    width: 120px;
+    margin-top: 16px;
+  }
+
+  .new-title {
+    font-size: 26px;
+  }
+
+  .new-description {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .new-main {
+    max-width: 720px;
+    padding-top: 32px;
+  }
+}
+
+/* ========= ДЕСКТОП ≥ 1024px ========= */
+/* ========= ДЛЯ ПК ≥1024px ========= */
+/* ========= ТОЛЬКО ДЛЯ ПК (≥1024px) ========= */
+@media (min-width: 1024px) {
+
+  /* Делаем страницу flex-контейнером,
+     чтобы футер автоматически прижимался вниз */
+  .new-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Основной контент растягивается,
+     толкая футер вниз */
+  .new-main {
+    flex: 1;
+  }
+
+  /* Футер — в одну линию */
+  .new-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 0;
+  }
+
+  .new-footer-line {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+}
+
+
+/* ====== FULLSCREEN LOADING OVERLAY ====== */
+.login2-loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.login2-loading-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.login2-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ddd;
+  border-top-color: #003574;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.login2-loading-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}

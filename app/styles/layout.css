@@ -1,0 +1,407 @@
+/* =============== TOP BAR (как на OLX) =============== */
+
+.olx-topbar {
+  background: #02282c;
+}
+
+.olx-topbar-inner {
+  max-width: 1270px;
+  height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 16px;
+}
+
+/* Правый блок */
+.olx-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-family: Geomanist, Arial, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22.4px;
+}
+
+.olx-topbar-icon-symbol {
+  font-size: 16px;
+}
+
+/* сами "пилюли" с иконками и кнопка */
+.olx-topbar-icon,
+.olx-topbar-add {
+  border: none;
+  background: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  font-weight: 750;
+}
+
+/* большая кнопка "Dodaj ogłoszenie" */
+.olx-topbar-add {
+  color: #02282c;
+  background: #ffffff;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  border-radius: 5px;
+  height: 46px;
+  width: 170px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.olx-topbar-add:hover {
+  background: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.olx-topbar-add:active {
+  opacity: 0.8;
+}
+
+/* вертикальная разделительная линия */
+.olx-topbar-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* иконки в топбаре */
+.olx-topbar-icon-svg {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.olx-topbar-icon-svg svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.olx-topbar-icon:hover {
+  opacity: 0.85;
+}
+
+.olx-topbar-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.6;
+}
+
+.olx-logo-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+/* адаптив для topbar */
+@media (max-width: 768px) {
+  .olx-topbar-inner {
+    gap: 8px;
+  }
+
+  .olx-topbar-right {
+    gap: 6px;
+  }
+
+  .olx-topbar-icon span:last-child {
+    display: none;
+  }
+
+  .olx-topbar-add {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* ====== FOOTER (2 колонки + бейджи, как на OLX) ====== */
+
+.olx-footer {
+  background: #f2f4f5;
+  padding: 45px 0 25px;
+  border-top: 1px solid #002f34;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* сетка: две колонки ссылок + колонка с приложениями */
+.olx-footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: 0.4fr 0.4fr auto;
+  column-gap: 10px;
+  align-items: flex-start;
+}
+
+/* списки ссылок */
+.olx-col {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+}
+
+.olx-col li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #002f34;
+  cursor: pointer;
+}
+
+.olx-col li:hover {
+  text-decoration: underline;
+}
+
+/* блок приложений справа */
+.olx-apps {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: -5px;
+}
+
+.olx-apps-row {
+  display: flex;
+  gap: 12px;
+}
+
+/* одинаковый размер иконок магазинов */
+.olx-apps-row img {
+  height: 44px;
+  object-fit: contain;
+}
+
+/* подпись */
+.olx-apps p {
+  margin: 0;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #607d8b;
+}
+
+/* нижний ряд стран */
+.olx-footer-countries {
+  max-width: 1200px;
+  margin: 35px auto 0;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: flex-start;
+  gap: 22px;
+  font-size: 13px;
+  color: #607d8b;
+
+  margin-bottom: 60px;
+}
+
+.olx-footer-countries span:hover {
+  text-decoration: underline;
+}
+
+/* адаптив для footer */
+@media (max-width: 900px) {
+  .olx-footer-grid {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .olx-apps-row {
+    flex-wrap: wrap;
+  }
+}
+
+/* ================================
+   TOPBAR + FOOTER responsive fix
+   ONLY <= 1024px
+   Put at the END of CSS
+================================ */
+
+@media (max-width: 1024px) {
+  /* -------- TOPBAR -------- */
+  .olx-topbar-inner {
+    height: auto;              /* чтобы не ломало контент */
+    min-height: 64px;
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .olx-logo-wrapper {
+    margin-left: 0;            /* убираем лишний сдвиг */
+    flex: 0 0 auto;
+  }
+
+  .olx-topbar-right {
+    gap: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    flex: 1;                   /* правый блок занимает остаток */
+    justify-content: flex-end; /* всё вправо */
+    min-width: 0;
+  }
+
+  .olx-topbar-divider {
+    height: 20px;
+  }
+
+  /* Кнопки/пилюли — чтобы не распирали */
+  .olx-topbar-icon,
+  .olx-topbar-add {
+    padding: 6px 8px;
+    gap: 8px;
+  }
+
+  /* Большая кнопка — нормальная ширина на планшете */
+  .olx-topbar-add {
+    width: auto;
+    min-height: 42px;
+    height: 42px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  /* -------- FOOTER -------- */
+  .olx-footer {
+    padding: 28px 0 18px;
+  }
+
+  .olx-footer-grid {
+    grid-template-columns: 1fr; /* всегда 1 колонка <1024 */
+    row-gap: 22px;
+    padding: 0 12px;
+  }
+
+  .olx-col li {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .olx-apps {
+    margin-top: 0;
+    align-items: flex-start;
+  }
+
+  .olx-apps-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .olx-apps-row img {
+    height: 40px;
+  }
+
+  .olx-footer-countries {
+    padding: 0 12px;
+    margin: 22px auto 0;
+    gap: 12px;
+    flex-wrap: wrap; /* чтобы страны не вылезали */
+    margin-bottom: 28px;
+  }
+}
+
+/* ---------- Mobile (<= 768px) ---------- */
+@media (max-width: 768px) {
+  /* TOPBAR: компактный, без текста у иконок */
+  .olx-topbar-inner {
+    padding: 10px 10px;
+    gap: 8px;
+  }
+
+  .olx-topbar-right {
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .olx-topbar-icon span:last-child {
+    display: none; /* оставляем только иконки */
+  }
+
+  .olx-topbar-icon-svg,
+  .olx-topbar-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* "Dodaj ogłoszenie" не должна быть огромной */
+  .olx-topbar-add {
+    padding: 8px 10px;
+    font-size: 12px;
+    min-height: 38px;
+    height: 38px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  .olx-topbar-divider {
+    display: none; /* на мобилке чаще мешает */
+  }
+
+  /* FOOTER */
+  .olx-footer {
+    padding: 24px 0 16px;
+  }
+
+  .olx-footer-grid {
+    row-gap: 18px;
+  }
+
+  .olx-apps-row img {
+    height: 38px;
+  }
+
+  .olx-footer-countries {
+    font-size: 12px;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+/* ---------- Small mobile (<= 480px) ---------- */
+@media (max-width: 480px) {
+  /* TOPBAR: чтобы всё влезало */
+  .olx-topbar-icon {
+    padding: 6px; /* минимально */
+  }
+
+  .olx-topbar-add {
+    font-size: 11px;
+    padding: 8px 9px;
+  }
+
+  /* FOOTER: чуть плотнее */
+  .olx-col li {
+    font-size: 13px;
+  }
+
+  .olx-apps p {
+    font-size: 12px;
+  }
+
+  .olx-topbar-icon{
+    margin-left: -7px;
+  }
+}

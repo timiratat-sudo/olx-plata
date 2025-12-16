@@ -1,0 +1,1059 @@
+/* ===== СТАРЫЙ ВАРИАНТ КАРТОЧКИ (демо) ===== */
+
+.olx-page {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  background-color: #f2f4f5;
+}
+
+.olx-card {
+  display: flex;
+  gap: 24px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .olx-card {
+    flex-direction: column;
+  }
+}
+
+.olx-left {
+  flex: 2;
+}
+
+.olx-right {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.olx-gallery-main {
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.olx-gallery-main img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.olx-gallery-thumbs {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.olx-thumb {
+  flex: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.olx-thumb img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ===== СТРАНИЦА ОБЪЯВЛЕНИЯ ===== */
+
+.olx-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.olx-breadcrumbs {
+  font-size: 12px;
+  color: #6c7a89;
+}
+
+.olx-breadcrumbs-current {
+  font-weight: 600;
+}
+
+.olx-title-row {
+  margin-top: 8px;
+  padding: 12px 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.olx-title-row h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.olx-ad-id {
+  font-size: 12px;
+  color: #90a4ae;
+}
+
+/* Две колонки */
+.olx-main {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .olx-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Галерея в полной странице */
+.olx-gallery {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.olx-main-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* секции слева */
+.olx-section {
+  margin-top: 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.olx-section-title,
+.olx-section h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Описание */
+.olx-description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  white-space: pre-line;
+}
+
+/* правая колонка карточки (старые боксы) */
+.olx-main-info,
+.olx-box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.olx-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.olx-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.olx-price {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.olx-badge-muted {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 16px;
+  border: 1px solid #cfd8dc;
+  color: #607d8b;
+  margin-top: 4px;
+}
+
+/* текст-location */
+.olx-location,
+.olx-location-small {
+  margin: 0;
+  font-size: 14px;
+  color: #455a64;
+}
+
+.olx-added {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #90a4ae;
+}
+
+/* параметры */
+.olx-params-box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 24px;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .olx-params-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+.olx-param-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.olx-param-label {
+  font-size: 12px;
+  color: #90a4ae;
+  text-transform: uppercase;
+}
+
+.olx-param-value {
+  font-weight: 500;
+  color: #263238;
+}
+
+/* кнопки */
+.olx-contact-box,
+.olx-contact-actions {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.olx-btn-primary,
+.olx-btn-secondary,
+.olx-btn-outline {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.olx-btn-primary {
+  background: #002f34;
+  color: #fff;
+}
+
+.olx-btn-primary:active {
+  transform: scale(0.98);
+}
+
+.olx-btn-secondary {
+  background: #e0f7fa;
+  color: #004d40;
+}
+
+.olx-btn-outline {
+  margin-top: 8px;
+  background: none;
+  border: 1px solid #cfd8dc;
+  color: #002f34;
+}
+
+/* избранное (старое) */
+.olx-fav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid #cfd8dc;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* продавец */
+.olx-seller-box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.olx-seller-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: #23e5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #002f34;
+}
+
+.olx-seller-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.olx-seller-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.olx-seller-meta {
+  margin: 0;
+  font-size: 12px;
+  color: #607d8b;
+}
+
+/* теги */
+.olx-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.olx-tags li {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f2f4f5;
+}
+
+/* локейшн + карта */
+.olx-location-text {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.olx-map-placeholder {
+  height: 180px;
+  border-radius: 8px;
+  background: #dde3e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #607d8b;
+  font-size: 14px;
+}
+
+/* ===== Правая price-карта ===== */
+
+.olx-price-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+
+.olx-date-small {
+  margin: 0;
+  font-size: 13px;
+  color: #607d8b;
+}
+
+.olx-title-price {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #002f34;
+}
+
+.olx-price-row-new {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.olx-price-new {
+  font-size: 28px;
+  font-weight: 700;
+  color: #002f34;
+}
+
+.olx-price-negotiation {
+  font-size: 15px;
+  color: #607d8b;
+}
+
+/* избранное (новая кнопка) */
+.olx-fav-btn-new {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 34px;
+  height: 34px;
+  background: white;
+  border: 1px solid #cfd8dc;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.olx-fav-btn-new:hover {
+  background: #f2f4f5;
+}
+
+/* Кнопки в правой колонке */
+.olx-btn-main {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: #002f34;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.olx-btn-main:hover {
+  background: #003e44;
+}
+
+.olx-btn-outline-new {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: transparent;
+  border: 2px solid #002f34;
+  color: #002f34;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.olx-btn-outline-new:hover {
+  background: #e0f7fa;
+}
+
+.olx-source-small {
+  font-size: 12px;
+  color: #90a4ae;
+  margin-top: 4px;
+}
+
+/* ====== Блок с инфой о заказе / описанием ====== */
+
+.olx-order-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 24px 20px;
+  border: 1px solid #e6e6e6;
+  margin-top: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.olx-order-title {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #002f34;
+}
+
+.olx-order-intro {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #2d3e50;
+}
+
+.olx-order-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.olx-order-label {
+  font-weight: 700;
+  color: #002f34;
+  margin-right: 6px;
+}
+
+.olx-order-value {
+  color: #2d3e50;
+}
+
+.olx-order-id-row {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #e6e6e6;
+  font-size: 13px;
+  color: #607d8b;
+}
+
+.olx-order-id-label {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.olx-order-id-value {
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .olx-order-box {
+    padding: 20px 16px 18px;
+  }
+
+  .olx-order-row {
+    flex-direction: column;
+  }
+
+  .olx-order-label {
+    margin-right: 0;
+  }
+}
+
+/* Общий контейнер секции (вариант с "DOSTAWA ZOSTAŁA JUŻ OPŁACONA") */
+
+.olx-order-section {
+  padding: 24px 28px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* верхний блок */
+.olx-order-paid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.olx-order-paid-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #002f34;
+}
+
+.olx-order-paid-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.olx-order-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: #002f34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.olx-order-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.olx-order-paid-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.olx-order-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #002f34;
+}
+
+.olx-order-safe {
+  font-size: 14px;
+  color: #7b8b8e;
+}
+
+.olx-order-next-btn {
+  margin-top: 6px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #002f34;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.olx-order-next-btn:hover {
+  background: #003944;
+}
+
+.olx-order-divider {
+  margin: 20px 0;
+  border-top: 1px solid #e0e7ea;
+}
+
+/* описание внутри этой секции */
+
+.olx-order-description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.olx-order-opis-title {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #002f34;
+}
+
+.olx-order-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #002f34;
+}
+
+@media (max-width: 768px) {
+  .olx-order-section {
+    padding: 16px 18px;
+  }
+
+  .olx-order-price {
+    font-size: 24px;
+  }
+}
+
+.olx-delivery-btn {
+  width: 95%;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #002f34;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.olx-delivery-btn:hover {
+  background: #004048;
+}
+
+/* ================================
+   FIX: responsive only (tablet + mobile)
+   Put this at the END of your CSS
+================================ */
+
+/* ---------- Tablet (<= 1024px) ---------- */
+@media (max-width: 1024px) {
+  .olx-content {
+    padding: 12px;
+  }
+
+  .olx-main {
+    gap: 12px;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  }
+
+  .olx-gallery,
+  .olx-section,
+  .olx-main-info,
+  .olx-box,
+  .olx-price-card,
+  .olx-order-box,
+  .olx-order-section {
+    border-radius: 10px;
+  }
+
+  .olx-gallery {
+    padding: 16px;
+  }
+
+  .olx-section {
+    padding: 14px 16px;
+  }
+
+  .olx-price-card {
+    padding: 16px 18px;
+  }
+}
+
+/* ---------- Tablet / small laptop (<= 900px) ---------- */
+@media (max-width: 900px) {
+  /* Grid -> 1 column */
+  .olx-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Header row stacks nicely */
+  .olx-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .olx-title-row h1 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  /* Right column becomes normal flow */
+  .olx-main-right {
+    gap: 10px;
+  }
+
+  /* Gallery thumbs: allow horizontal scroll instead of squeezing */
+  .olx-gallery-thumbs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px;
+    padding-bottom: 6px;
+  }
+
+  .olx-thumb {
+    flex: 0 0 auto;
+    width: 84px;
+  }
+
+  .olx-thumb img {
+    height: 64px;
+  }
+}
+
+/* ---------- Mobile (<= 768px) ---------- */
+@media (max-width: 768px) {
+  .olx-page {
+    padding: 12px;
+  }
+
+  .olx-content {
+    padding: 10px;
+  }
+
+  .olx-breadcrumbs {
+    font-size: 11px;
+  }
+
+  .olx-title-row {
+    padding: 12px 12px;
+  }
+
+  .olx-title-row h1 {
+    font-size: 18px;
+  }
+
+  /* Cards spacing tighter */
+  .olx-gallery,
+  .olx-section,
+  .olx-main-info,
+  .olx-box {
+    padding: 12px 12px;
+  }
+
+  /* Price card */
+  .olx-price-card {
+    padding: 14px 14px;
+    gap: 12px;
+  }
+
+  .olx-fav-btn-new {
+    top: 12px;
+    right: 12px;
+  }
+
+  .olx-price-new,
+  .olx-price,
+  .olx-order-price {
+    font-size: 24px;
+  }
+
+  /* Params -> 1 column, readable */
+  .olx-params-box {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px 12px;
+  }
+
+  .olx-param-label {
+    font-size: 11px;
+  }
+
+  .olx-param-value {
+    font-size: 14px;
+  }
+
+  /* Buttons: a bit smaller height for mobile */
+  .olx-btn-main,
+  .olx-btn-outline-new,
+  .olx-btn-primary,
+  .olx-btn-secondary,
+  .olx-btn-outline,
+  .olx-order-next-btn {
+    padding: 12px 12px;
+    font-size: 15px;
+  }
+
+  /* Seller box stacks so it doesn't squeeze */
+  .olx-seller-box {
+    align-items: flex-start;
+  }
+
+  .olx-seller-avatar {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Map */
+  .olx-map-placeholder {
+    height: 160px;
+  }
+
+  /* Order section paddings */
+  .olx-order-section {
+    padding: 14px 14px;
+  }
+
+  .olx-order-paid-row {
+    align-items: flex-start;
+  }
+
+  .olx-order-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .olx-order-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Delivery button full width + no weird 95% */
+  .olx-delivery-btn {
+    width: 100%;
+    margin-top: 12px;
+  }
+}
+
+/* ================================
+   RESPONSIVE FIX
+   ONLY <= 1024px
+================================ */
+
+/* ---------- Tablet & Mobile (<= 1024px) ---------- */
+@media (max-width: 1024px) {
+
+  /* Общие отступы */
+  .olx-page {
+    padding: 12px;
+  }
+
+  .olx-content {
+    padding: 12px;
+  }
+
+  /* Главная сетка → всегда 1 колонка */
+  .olx-main {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Заголовок */
+  .olx-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 12px;
+  }
+
+  .olx-title-row h1 {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  /* Галерея */
+  .olx-gallery {
+    padding: 14px;
+  }
+
+  .olx-gallery-main img {
+    max-height: 320px;
+    object-fit: cover;
+  }
+
+  /* Превью — горизонтальный скролл */
+  .olx-gallery-thumbs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+
+  .olx-thumb {
+    flex: 0 0 auto;
+    width: 80px;
+  }
+
+  .olx-thumb img {
+    height: 60px;
+  }
+
+  /* Правая колонка → обычный поток */
+  .olx-main-right {
+    gap: 10px;
+  }
+
+  /* Price card */
+  .olx-price-card {
+    padding: 16px;
+    gap: 12px;
+    border-radius: 10px;
+  }
+
+  .olx-fav-btn-new {
+    top: 12px;
+    right: 12px;
+  }
+
+  .olx-price-new {
+    font-size: 24px;
+  }
+
+  /* Кнопки */
+  .olx-btn-main,
+  .olx-btn-outline-new,
+  .olx-btn-primary,
+  .olx-btn-secondary,
+  .olx-btn-outline,
+  .olx-order-next-btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  /* Параметры → 1 колонка */
+  .olx-params-box {
+    grid-template-columns: 1fr;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .olx-param-label {
+    font-size: 11px;
+  }
+
+  .olx-param-value {
+    font-size: 14px;
+  }
+
+  /* Описание */
+  .olx-section {
+    padding: 14px;
+  }
+
+  .olx-description {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  /* Продавец */
+  .olx-seller-box {
+    padding: 14px;
+    align-items: flex-start;
+  }
+
+  .olx-seller-avatar {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Карта */
+  .olx-map-placeholder {
+    height: 160px;
+  }
+
+  /* Order / delivery блок */
+  .olx-order-box,
+  .olx-order-section {
+    padding: 16px;
+  }
+
+  .olx-order-price {
+    font-size: 24px;
+  }
+
+  .olx-delivery-btn {
+    width: 100%;
+    margin-top: 12px;
+  }
+}
+
+/* ---------- Small mobile (<= 480px) ---------- */
+@media (max-width: 480px) {
+
+  .olx-title-row h1 {
+    font-size: 18px;
+  }
+
+  .olx-price-new,
+  .olx-price,
+  .olx-order-price {
+    font-size: 22px;
+  }
+
+  .olx-thumb {
+    width: 72px;
+  }
+
+  .olx-thumb img {
+    height: 54px;
+  }
+
+  .olx-description,
+  .olx-order-text {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,443 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #ffffff;
+  font-family: "Segoe UI Variable Text", "Segoe UI", sans-serif;
+}
+
+/* Вся страница: вертикальный флекс, чтобы футер был внизу, всё по центру */
+.page-sms {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+/* НАВБАР И ФУТЕР — ОДИНАКОВАЯ ВЫСОТА (64px) */
+.navbar,
+.footer-sms {
+  height: 64px;
+}
+
+/* Внутренности навбара */
+.navbar-inner {
+  max-width: 1230px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-sms.logo-sms{
+  margin: 0;
+  margin-left: -700px;
+  width: 180px;
+  height: 60px;
+}
+
+.navbar-left,
+.navbar-right {
+  font-size: 16px;
+}
+
+/* Серая полоса после навбара и перед футером (на всю ширину) */
+.nav-separator {
+  width: 100%;
+  height: 1px;
+  background: #dddddd;
+}
+
+/* ГЛАВНЫЙ БЛОК 1230px ПО ЦЕНТРУ */
+.main-container {
+  width: 1000px;
+  margin: 40px auto 40px;
+}
+
+/* Заголовок */
+.page-title {
+  margin: 0 0 24px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+/* Маленький серый блок с иконкой и текстом */
+.info-box {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background: #e2e2e2;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  border-radius: 15px;
+  margin-top: 44px;
+}
+
+/* Иконка слева (путь потом сам добавишь) */
+.info-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* Текст справа от иконки */
+.info-text {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+  line-height: 20px;
+}
+
+/* Серая линия по ширине главного блока, по центру */
+.main-divider {
+  width: 100%;
+  height: 1px;
+  background: #dddddd;
+  margin: 24px 0;
+  
+  margin-top: 40px;
+}
+
+/* Ряд: слева кнопка, справа текст + иконка */
+.bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 40px;
+}
+  
+
+/* Кнопка слева */
+.primary-button {
+  width: 150px;
+  height: 40px;
+  background-color: #003574;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.primary-button:hover {
+  background-color: #001e4b;
+}
+
+/* Справа: текст + иконка */
+.bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bottom-text {
+  font-size: 14px;
+  color: black;
+  font-weight: 600;      
+}
+
+
+.bottom-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* Футер */
+.footer-sms {
+  width: 2166px;
+  height: 64px;
+  color: rgb(0, 0, 0);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-left: 665px;
+}
+
+.footer-text-sms {
+  margin-left: 20px;
+  display: flex;          /* ставим элементы в ряд */
+  gap: 50px;
+  color: #636363;   
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;  
+}
+
+.footer-line {
+  height: 8px;
+  background: #F2F2F2;
+  
+  position: fixed;
+  bottom: 90px;
+  width: 150%;
+  margin-right: auto;
+}
+
+.bottom-right {
+  display: flex;
+  flex-direction: column; /* ← ставит таймер СНИЗУ */
+  align-items: flex-end;
+  gap: 6px;
+  margin-right: -575px;
+}
+
+.right-top-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timer-text {
+  font-size: 14px;
+  color: #2e3c45;
+  margin: 4px 0 0;
+  margin-top: -2px;
+}
+
+.timer-number {
+  color: #ff4d4d;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.sms-icon {
+   width: 50px;
+   height: auto;
+   border: 0.5px solid #cccccc;
+   border-radius: 12px;
+   
+}
+
+
+  
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 1024px) {
+
+  .main-container {
+    width: 90%;
+  }
+
+  .page-sms .logo-sms {
+    margin-left: 10px;
+    width: 150px;
+    height: auto;
+  }
+
+  .info-box {
+    width: 100%;
+  }
+
+  .bottom-right {
+    margin-right: 0;
+  }
+
+  .sms-icon {
+    width: 40px;
+  }
+  .footer-line{
+    position: fixed;
+    bottom: 90px;
+  }
+  .footer-text-sms {
+    font-size: 12px;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    position: fixed;
+    bottom: 15px;
+  }
+}
+
+
+/* ========================= */
+/*     АДАПТИВ ≤ 768px       */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  /* центральный контейнер */
+  .main-container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .page-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .page-sms .logo-sms {
+    margin-left: 10px;
+    width: 50px;
+    height: auto;
+  }
+
+  /* маленький блок */
+  .info-box {
+    flex-direction: row;
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+  }
+
+  /* разделительная линия */
+  .main-divider {
+    margin: 24px 0;
+  }
+
+  /* нижний блок → в столбик */
+  .bottom-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .bottom-right {
+    align-items: center;
+  }
+
+  .right-top-row {
+    justify-content: center;
+  }
+
+  .timer-text {
+    margin-top: -4px;
+  }
+
+  /* sms icon */
+  .sms-icon {
+    margin-top: 8px;
+    width: 40px;
+  }
+
+  /* футер теперь НЕ фиксированный */
+  .footer-sms {
+    position: static;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-text-sms {
+    justify-content: center;
+    gap: 20px;
+    margin-left: 0;
+  }
+
+  /* удаляем фиксированную линию */
+  .footer-line {
+    position: static;
+    width: 100%;
+  }
+
+  .footer-line{
+    position: fixed;
+    bottom: 90;
+  }
+  .footer-text-sms {
+    font-size: 12px;
+    flex-direction: column;
+    gap: 8px;
+    position: static;
+    width: 100%;
+    position: fixed;
+    bottom: 15;
+  }
+}
+
+
+/* ========================= */
+/*     АДАПТИВ ≤ 480px       */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+  .page-sms .logo-sms {
+    margin-left: 10px;
+    width: 50px;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .info-text {
+    font-size: 13px;
+  }
+
+  .timer-text {
+    font-size: 13px;
+  }
+
+  .timer-number {
+    font-size: 14px;
+  }
+
+  .sms-icon {
+    width: 36px;
+  }
+
+  .footer-line{
+    position: fixed;
+    bottom: 90;
+  }
+  .footer-text-sms {
+    font-size: 12px;
+    flex-direction: column;
+    gap: 8px;
+    position: static;
+    width: 100%;
+    position: fixed;
+    bottom: 15;
+  }
+}
+
+@media (min-width: 820px) and (max-width: 1230px) {
+
+  .main-container {
+    width: 90%;
+  }
+
+  .page-sms .logo-sms {
+    margin-left: 10px;
+    width: 50px;
+    height: auto;
+  }
+
+  .info-box {
+    width: 100%;
+  }
+
+  .bottom-right {
+    margin-right: 0;
+  }
+
+  .sms-icon {
+    width: 40px;
+  }
+  .footer-line{
+    position: fixed;
+    bottom: 90px;
+  }
+  .footer-text-sms {
+    font-size: 12px;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    bottom: 15px;
+    left: 325px;
+  }
+}
+
+@media(min-width: 1020px) and (max-width: 1026px) {
+  .footer-text-sms{
+    left: 425px;
+  }
+}

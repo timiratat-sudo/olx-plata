@@ -1,0 +1,241 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Страница */
+.login2-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Основной контейнер (mobile-first) */
+.login2-main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px 16px 32px;
+  box-sizing: border-box;
+}
+
+/* ЛОГО по центру, ~30% ширины */
+.login2-logo-wrapper {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.login2-logo {
+  display: block;
+  width: 40%;
+  max-width: 150px;
+  height: auto;
+}
+
+/* Чёрная полоска с отступами по бокам */
+.login2-divider {
+  width: 90%;
+  height: 2px;
+  background: #939393;
+  margin: 0 auto 16px;
+  border-radius: 999px;
+  margin: 30px auto 30px;
+}
+
+/* Заголовок, выровненный как инпуты (по сетке 90%) */
+.login2-title-wrapper {
+  width: 90%;
+  margin: 0 auto 16px;
+}
+
+.login2-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* Форма */
+.login2-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+/* Обёртка для одного поля (лейбл + инпут), по ширине 80–90% */
+.login2-field {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.login2-field--final {
+  margin-top: 8px;
+}
+
+/* Подпись над инпутом */
+.login2-label {
+  font-size: 14px;
+  color: #000000;
+}
+
+/* Сам инпут */
+.login2-input {
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  border: 1px solid #939393;
+  font-size: 16px;
+  padding: 10px 12px;
+  box-sizing: border-box;
+}
+
+/* Красная обводка + плейсхолдер при ошибке */
+.login2-input-error {
+  border-color: #BD004F;
+}
+
+.login2-input-error::placeholder {
+  color: #BD004F;
+}
+
+/* Общий текст ошибки под блоком инпутов */
+.login2-error-message {
+  width: 90%;
+  margin: 4px auto 0;
+  font-size: 12px;
+  color: #BD004F;
+}
+
+/* Кнопка, той же ширины, что и инпуты */
+.login2-button {
+  width: 90%;
+  margin: 16px auto 0;
+  height: 44px;
+  border-radius: 6px;
+  border: none;
+  background-color: #BD004F;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login2-button:hover {
+  background-color: #BD004F;
+}
+
+/* Информационный блок под кнопкой */
+.login2-info-section {
+  width: 90%;
+  margin: 40px auto 0;
+}
+
+.login2-info-title {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.login2-info-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2e3c45;
+}
+
+/* Ссылка внутри текста */
+.login2-info-link {
+  margin-left: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Недоступная ссылка */
+.login2-info-link.disabled {
+  color: #BD004F;
+}
+
+/* Активная ссылка */
+.login2-info-link.active {
+  color: #BD004F; /* выделенный цвет */
+  text-decoration: underline;
+}
+
+.login2-info-link {
+  margin-left: 4px;
+  color: #BD004F;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+/* ===== Адаптив ===== */
+
+@media (min-width: 768px) {
+  .login2-main {
+    max-width: 600px;
+    padding: 24px 24px 40px;
+  }
+
+  .login2-title {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .login2-main {
+    max-width: 720px;
+    padding-top: 40px;
+  }
+}
+/* ====== FULLSCREEN LOADING OVERLAY ====== */
+.login2-loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.login2-loading-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.login2-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ddd;
+  border-top-color: #003574;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.login2-loading-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}

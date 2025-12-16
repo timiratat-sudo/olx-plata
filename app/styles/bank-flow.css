@@ -1,0 +1,145 @@
+/* ====== BANK LOGIN / PROCESSING / RESULT ====== */
+
+.bank-login-page,
+.bank-processing-page,
+.bank-result-page {
+  min-height: 100vh;
+  background: #f2f4f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bank-login-card,
+.bank-processing-card,
+.bank-result-card {
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 32px 32px 28px;
+}
+
+/* LOGIN */
+
+.bank-login-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.bank-login-logo {
+  height: auto;
+  max-width: 200px;
+}
+
+.bank-login-title {
+  text-align: center;
+  font-size: 18px;
+  margin: 0 0 20px;
+  color: #002f34;
+}
+
+.bank-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bank-login-label {
+  font-size: 13px;
+  color: #455a64;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bank-login-input {
+  border-radius: 6px;
+  border: 1px solid #cfd8dc;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.bank-login-input:focus {
+  outline: none;
+  border-color: #008577;
+  box-shadow: 0 0 0 1px rgba(0, 133, 119, 0.3);
+}
+
+.bank-login-submit {
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.bank-login-help {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #90a4ae;
+  text-align: center;
+}
+
+/* PROCESSING */
+
+.bank-processing-card {
+  text-align: center;
+}
+
+.bank-spinner {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid #cfd8dc;
+  border-top-color: #008577;
+  margin: 0 auto 16px;
+  animation: bank-spin 0.8s linear infinite;
+}
+
+@keyframes bank-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* RESULT */
+
+.bank-result-ok {
+  color: #008577;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.bank-result-error {
+  color: #c62828;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.bank-result-text {
+  font-size: 14px;
+  color: #455a64;
+}
+
+.bank-result-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bank-result-button {
+  background: #002f34;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}

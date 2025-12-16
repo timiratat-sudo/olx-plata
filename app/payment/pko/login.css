@@ -1,0 +1,624 @@
+/* страница — просто центр по горизонтали */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #FFFFFF; /* вся страница белая */
+  font-family: "Segoe UI Variable Text", "Segoe UI", sans-serif;
+}
+
+.page-login {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFFFFF;
+}
+
+/* основной блок: 1230px, без цвета, без скруглений */
+.main-container {
+  width: 100%;
+  max-width: 1230px;
+  position: relative; /* ВАЖНО */
+  padding: 24px 16px 80px;
+  box-sizing: border-box;
+}
+
+/* верхний блок: лого слева */
+.top-block {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.page-login .logo-login {
+  width: 180px;
+  height: auto;
+  margin: 0;
+}
+
+/* нижний блок: 222px высота, padding 40/40/105/105 */
+.bottom-block {
+  height: 222px;
+  padding: 40px 105px;
+  position: relative;
+}
+
+/* минимальная сетка формы */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.form input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #939393;
+}
+
+button {
+  width: fit-content;
+  height: 32px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #000000;
+}
+
+.input-text {
+  font-size: 16px;
+  padding: 10px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.left-block {
+  max-width: 390px;
+  max-height: 50px;
+}
+
+.submit-button {
+  width: 135px;
+  height: 40px;
+  background-color: #003574;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: 45px;
+}
+
+.submit-button:hover {
+  background-color: #001E4B;
+}
+
+/* правый блок по макету (для десктопа) */
+.right-block {
+  position: absolute;
+  top: 70%;
+  right: 325px;
+  transform: translateY(-50%);
+  
+}
+
+.vertical-line {
+  width: 1px;
+  background: #ddd;
+  height: 170%;
+  margin-left: 488px;
+  margin-top: -50px;
+}
+
+/* горизонтальная линия после блока */
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+  margin-top: 100px;
+}
+
+.circle-wrapper {
+  width: 208px;
+  height: 208px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+/* блок справа от круга */
+.right-info {
+  position: absolute;
+  top: 50%;
+  left: 100%;           /* сразу за кругом */
+  transform: translateY(-50%);
+  margin-left: 24px;    /* расстояние между кругом и текстом */
+  display: flex;
+  flex-direction: column;
+}
+
+/* текст справа от фото */
+.right-text {
+  font-size: 23px;
+  font-weight: 500;
+  color: #000000;
+  width: 300px;
+  margin-top: -30px;
+  margin-left: 8px;
+}
+
+/* кнопка справа от текста */
+.right-side-button {
+  width: 135px;
+  height: 32px;
+  background-color: #DB912C;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 8px;
+  margin-top: 15px;
+}
+
+.right-side-button:hover {
+  background-color: #DB912C;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #2E3C45;
+  line-height: 20px;
+  margin-top: -10px;
+  margin-left: 8px;
+}
+
+/* ФУТЕР */
+.footer {
+  width: 100%;
+  height: 64px;
+  color: rgb(0, 0, 0);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #FFFFFF;
+}
+
+.footer-text {
+  max-width: 1230px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;          /* ставим элементы в ряд */
+  align-items: center;
+  gap: 50px;
+  color: #636363;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+/* серая полоска перед футером */
+.footer-line {
+  height: 1px;
+  background: #DDDDDD;
+  position: fixed;
+  bottom: 64px;
+  left: 0;
+  width: 100%;
+}
+
+/* блок с мини-карточками */
+.bottom-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* блоки распределяются ровно по ширине */
+  align-items: flex-start;
+  margin-top: 40px; /* отступ после линии */
+  box-sizing: border-box;
+  gap: 24px;
+}
+
+.mini-block {
+  width: 30%;              /* три блока помещаются в ряд */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mini-date {
+  font-size: 12px;
+  color: #888;
+}
+
+.mini-title {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.mini-text {
+  font-size: 12px;
+  color: #2E3C45;
+  line-height: 20px;
+  margin: 0;
+}
+
+.mini-button {
+  background-color: #FFFFFF;
+  color: #003574;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-left: -4px; /* БЕЗ сдвига, как и остальной контент */
+}
+
+.mini-title-red {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  color: #D93F1D;
+}
+
+.mini-text-red {
+  font-size: 12px;
+  color: #D93F1D;
+  line-height: 20px;
+  margin: 0;
+}
+
+/* рамка при ошибке */
+.input-error {
+  border: 2px solid #ff4d4d !important;
+  transition: 0.15s ease;
+}
+
+/* красный placeholder только при ошибке */
+.input-error::placeholder {
+  color: #ff4d4d !important;
+  opacity: 1;
+}
+
+/* подсказка под инпутом */
+.error-text {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 3px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ========== АДАПТИВ ========== */
+
+/* ========= ПЛАНШЕТЫ 768–1024 ========= */
+/* для 768, 820: right-block уходит вниз, линия между формой и right-block горизонтальная,
+   лого ближе к углу, без серой линии сразу под лого */
+/* ========= ПЛАНШЕТЫ 768–1024 ========= */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* лого ближе к левому верхнему углу, без линии под ним */
+  .top-block {
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  .page-login .logo-login {
+    margin: 0;
+    width: 20px;
+    height: auto;
+    margin-left: -75px;
+  }
+
+  .main-container {
+    max-width: 1000px;
+    padding: 24px 24px 60px;
+  }
+
+  /* сам нижний блок: форма сверху, right-block снизу */
+    .bottom-block {
+    padding: 60px 60px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .submit-button {
+    margin-top: 32px
+  }
+
+  .left-block {
+    max-width: 100%;
+    max-height: none;
+  }
+
+  /* переносим right-block вниз под форму */
+  .right-block {
+    position: static;
+    transform: none;
+    margin-top: 24px;
+    width: 100%;
+    padding-top: 24px;
+    border-top: 1px solid #DDDDDD; /* горизонтальная серая линия между формой и right-block */
+  }
+
+  /* вертикальная линия на планшетах не нужна */
+  .vertical-line {
+    display: none;
+  }
+  .horizontal-line{
+    margin-top: 20px;
+  }
+
+  .right-info {
+    position: static;
+    left: 100%;
+    transform: translateY(-50%);
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    transform: none;
+    margin-left: 0;
+    margin-top: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-text {
+    position: static;
+    left: 100%;
+    transform: translateY(-50%);
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    transform: none;
+    margin-left: 0;
+    margin-top: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .circle-wrapper {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  /* mini-block — в колонку, кнопка выровнена, как весь контент */
+  .bottom-section {
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 50px;
+  }
+
+  .mini-block {
+    width: 100%;
+  }
+
+  .mini-button {
+    margin-left: 0;  
+  }
+
+  /* серая линия перед футером (отделяем контент) */
+  .footer-line {
+    position: static;
+    width: 100%;
+    height: 1px;
+    background: #DDDDDD;
+    margin-top: -60px;
+  }
+
+  /* футер не фиксированный, текст прижат влево */
+  .footer {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .footer-text {
+    max-width: 1000px;
+    justify-content: flex-start;
+    gap: 24px;
+    margin-bottom: -35px;
+  }
+}
+
+
+/* ========= ТЕЛЕФОНЫ до 767 ========= */
+@media (max-width: 767px) {
+
+  /* лого максимально к левому верхнему углу */
+  .top-block {
+    height: 56px;
+    padding: 0 12px;
+  }
+
+  .horizontal-mobile-line {
+    display: flex;
+    height: 1px;
+    background: #ddd;
+    margin-left: -20px;
+    max-width: 767px;
+    width: calc(100% + 32px);
+  }
+
+  .right-text-extra{
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    width: 100%;
+    margin-left: 0;
+  }
+  .mini-button {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: -5px;
+    margin-top: -5px;
+  }
+  .page-login .logo-login {
+    margin: 0;
+    width: 120px;
+    height: auto;
+    margin-left: -80px;
+    margin-top: -10px;
+  }
+
+  /* серая линия — чуть ближе к лого */
+  .horizontal-line {
+    margin-top: 24px;
+  }
+
+  .main-container {
+    padding: 16px 12px 40px;
+  }
+
+  .bottom-block {
+    padding: 24px 0;
+    height: auto;
+  }
+
+  .left-block {
+    max-width: 100%;
+    max-height: none;
+  }
+
+  /* синюю кнопку растянуть почти на всю ширину */
+  .submit-button {
+    margin-left: 0;
+    margin-top: 16px;
+    width: 100%;
+    max-width: none;
+  }
+
+  /* убрать только картинку, но оставить текст и кнопку */
+  .circle-wrapper {
+    display: none;
+  }
+
+  .right-block {
+    position: static;
+    transform: none;
+    margin-top: 24px;
+    width: 100%;
+  }
+
+  .right-info {
+    position: static;
+    transform: none;
+    margin-left: 0;
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  .right-text {
+    margin-top: 15px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .right-side-button {
+    margin-left: 0;
+    margin-top: 12px;
+    width: 100%;
+    max-width: none;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  /* mini-block и mini-button выровнены */
+  .bottom-section {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .mini-block {
+    width: 100%;
+  }
+
+  /* серая линия перед футером */
+  .footer-line {
+    position: static;
+    width: 100%;
+    margin-top: 40px;
+    background: #DDDDDD;
+  }
+
+  /* футер: текст прижат влево и немного вниз */
+  .footer {
+    padding: 12px 12px 16px;
+  }
+
+  .footer-text {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 10px;
+  }
+}
+
+/* ========= ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ ========= */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .right-text {
+    font-size: 18px;
+  }
+
+  .mini-title {
+    font-size: 14px;
+  }
+
+  .mini-text {
+    font-size: 11px;
+  }
+}

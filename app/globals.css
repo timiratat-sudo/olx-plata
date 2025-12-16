@@ -1,0 +1,20 @@
+/* СБРОС */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0; /* вся страница белая */
+  font-family: system-ui, sans-serif;
+  
+}
+
+/* на всякий случай убираем паддинги у main, если он есть */
+main {
+  margin: 0;
+  padding: 0;
+}

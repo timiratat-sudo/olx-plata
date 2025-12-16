@@ -1,0 +1,21 @@
+/* ===== БАЗА ===== */
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  sans-serif;
+}
+
+/* app shell (новая обёртка) */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body {
+  height: 100%;
+  background: #f2f4f5;
+}
+
