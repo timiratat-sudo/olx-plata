@@ -6,8 +6,8 @@ import "./styles/layout.css";
 
 
 export const metadata = {
-  title: "OLX Clone",
-  description: "Twój własny OLX layout",
+  title: "OLX",
+  description: "Twój przedmiot został opłacony",
 };
 
 export default function RootLayout({
