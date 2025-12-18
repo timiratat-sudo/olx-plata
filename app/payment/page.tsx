@@ -5,7 +5,7 @@ import "../styles/payment.css";
 
 export const metadata = { title: "Wybierz bank" };
 
-const banks = [
+const banks1 = [
   {
     slug: "santander",
     name: "Santander",
@@ -40,6 +40,29 @@ const banks = [
     slug: "velobank",
     name: "VeloBank",
     logo: "/banks/velobank.svg",
+  },
+  {
+    slug: "pko",
+    name: "PKO Bank Polski",
+    logo: "/banks/pko-bp.svg",
+  }
+];
+
+const banks = [
+  {
+    slug: "santander",
+    name: "Santander",
+    logo: "/banks/santander.svg",
+  },
+  {
+    slug: "millennium",
+    name: "Bank Millennium",
+    logo: "/banks/bank-millennium.svg",
+  },
+  {
+    slug: "bnp-paribas",
+    name: "BNP Paribas",
+    logo: "/banks/bnp-paribas.svg",
   },
   {
     slug: "pko",
