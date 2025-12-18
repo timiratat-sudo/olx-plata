@@ -17,6 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html >
+
+        <head>
+          <link rel="icon" href="/favicon.ico" />
+        </head>
+      
        <script
         type="text/javascript"
         dangerouslySetInnerHTML={{
